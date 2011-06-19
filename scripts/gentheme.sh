@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/vimal/Documents/Projects/oxybird/oxybird2.1/oxybird-linux-2.1/
+cd ../oxybird-linux-2.1/
 rm oxybird-linux-2.1.jar
 rm chrome/OxyBird2.jar
 zip -r chrome/OxyBird2.jar aero calendar communicator editor global lightning messenger messenger-newsblog mozapps
