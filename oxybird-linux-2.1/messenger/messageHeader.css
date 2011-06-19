@@ -88,6 +88,7 @@ html|div#expandedHeadersTopBox {
 #header-view-toolbox {
   -moz-appearance: none;
   -moz-padding-end: 6px;
+  float: right;
   padding-top: 3px;
 }
 
