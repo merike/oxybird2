@@ -51,13 +51,15 @@
 
 #calendar-header-name-column,
 #calendar-task-details-attachment-row > hbox {
-    width: 7.7em;
+    -moz-padding-start: 0.1em;
 }
 
 #calendar-task-details-grid,
 #other-actions-box {
-    padding: 0.5em;
+    padding: 0.1em;
     -moz-padding-start: 0;
+    -moz-padding-end: 0;
+    padding-bottom: 0.2em;
 }
 
 #calendar-task-details {
@@ -145,8 +147,68 @@
     margin-bottom: 3px;
 }
 
+/* ::::: task actions toolbar ::::: */
+
+#task-actions-toolbox {
+    -moz-appearance: none;
+    border: none;
+}
+
+#task-actions-toolbar {
+    -moz-appearance: none;
+    -moz-box-pack: end;
+    min-height: 0;
+    padding: 0;
+    border: none;
+}
+
+#task-actions-toolbar toolbarpaletteitem toolbarseparator,
+#task-actions-toolbar toolbarseparator {
+    height: 26px;
+}
+
+#task-actions-toolbar toolbarspacer {
+    height: 20px;
+}
+
+window[toolboxId="task-actions-toolbox"] #wrapper-spring {
+    display: none;
+}
+
+window[toolboxId="task-actions-toolbox"] #smallicons,
+window[toolboxId="task-actions-toolbox"] button[icon="add"] {
+    display: none;
+}
+
+window[toolboxId="task-actions-toolbox"] #modelist menuitem:first-child {
+    display: none;
+}
+
+#task-actions-toolbox[doCustomization] {
+    background: grey;
+}
+
+#task-actions-toolbox[doCustomization] #task-actions-toolbar {
+    min-width: 100px;
+    min-height: 10px;
+}
+
+#task-actions-category {
+    list-style-image: url(chrome://calendar/skin/images/tasks-actions.png);
+    -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+#task-actions-markcompleted {
+    list-style-image: url(chrome://calendar/skin/images/tasks-actions.png);
+    -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+#task-actions-priority {
+    list-style-image: url(chrome://calendar/skin/images/tasks-actions.png);
+    -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
 #calendar-delete-task-button {
-    -moz-box-orient: vertical;
     list-style-image: url(chrome://calendar/skin/images/toolbar-small.png);
     -moz-image-region: rect(0px, 48px, 16px, 32px);
 }
