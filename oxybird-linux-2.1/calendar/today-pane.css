@@ -192,7 +192,7 @@
 }
 
 #todaypane-new-event-button {
-  list-style-image: url("chrome://calendar/skin/toolbar-small.png");
+  list-style-image: url("chrome://calendar/skin/images/toolbar-small.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
 #todaypane-new-event-button[disabled="true"],

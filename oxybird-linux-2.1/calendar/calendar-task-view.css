@@ -147,12 +147,12 @@
 
 #calendar-delete-task-button {
     -moz-box-orient: vertical;
-    list-style-image: url(chrome://calendar/skin/toolbar-small.png);
+    list-style-image: url(chrome://calendar/skin/images/toolbar-small.png);
     -moz-image-region: rect(0px, 48px, 16px, 32px);
 }
 
 #calendar-add-task-button {
-    list-style-image: url(chrome://calendar/skin/toolbar-small.png);
+    list-style-image: url(chrome://calendar/skin/images/toolbar-small.png);
     -moz-image-region: rect(0px 256px 16px 240px);
     -moz-margin-start: 5px;
 }
