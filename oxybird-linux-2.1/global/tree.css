@@ -335,17 +335,16 @@ treechildren::-moz-tree-column(insertafter) {
 /* ::::: twisty :::::  */
 
 treechildren::-moz-tree-twisty {
-  -moz-appearance: treetwisty;
+  -moz-appearance: none;
   -moz-padding-end: 4px;
   padding-top: 1px;
-  width: 9px; /* The image's width is 9 pixels */
-  list-style-image: url("chrome://global/skin/tree/twisty-clsd.png");
+  width: 12px;
+  background-image: url(chrome://global/skin/icons/expand.png);
 }
 
 treechildren::-moz-tree-twisty(open) {
-  -moz-appearance: treetwistyopen;
-  width: 9px; /* The image's width is 9 pixels */
-  list-style-image: url("chrome://global/skin/tree/twisty-open.png");
+  width: 12px;
+  background-image: url(chrome://global/skin/icons/collapse.png);
 }
 
 treechildren::-moz-tree-indentation {

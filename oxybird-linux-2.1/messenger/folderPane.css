@@ -226,12 +226,12 @@ treechildren::-moz-tree-cell-text(folderNameCol, noSelect-true) {
 /* Make sidebar look normal. */
 
 treechildren::-moz-tree-twisty {
-  -moz-appearance: treetwisty;
+  -moz-appearance: none;
   margin-right: 3px;
 }
 
 treechildren::-moz-tree-twisty(open) {
-  -moz-appearance: treetwistyopen;
+  background-image: url(chrome://global/skin/icons/collapse.png);
 }
 
 treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true) {

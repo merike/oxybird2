@@ -128,7 +128,7 @@ html|div#expandedHeadersTopBox {
 
 #attachmentToggle {
   list-style-image: url(chrome://global/skin/icons/collapse.png);
-   -moz-appearance: toolbarbutton; 
+  -moz-appearance: toolbarbutton;
   min-width: 16px !important;
 }
 
