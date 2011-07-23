@@ -255,22 +255,22 @@
   list-style-image: url("chrome://mozapps/skin/extensions/viewButtons.png");
   -moz-image-region: rect(0px, 192px, 32px, 160px);
 }
-#category-languages > .category-icon {
+#category-locale > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/viewButtons.png");
   -moz-image-region: rect(0px, 96px,  32px, 64px);
 }
-#category-searchengines > .category-icon {
+#category-searchengine > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-searchengines.png");
 }
-#category-extensions > .category-icon {
+#category-extension > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/viewButtons.png");
   -moz-image-region: rect(0px, 32px,  32px, 0px);
 }
-#category-themes > .category-icon {
+#category-theme > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/viewButtons.png");
   -moz-image-region: rect(0px, 64px,  32px, 32px);
 }
-#category-plugins > .category-icon {
+#category-plugin > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/viewButtons.png");
   -moz-image-region: rect(0px, 128px, 32px, 96px);
 }
