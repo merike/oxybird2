@@ -543,6 +543,7 @@ calendar-editable-item[selected="true"] .calendar-event-selection {
 
 .calendar-category-box-gradient {
     list-style-image: url("chrome://calendar/skin/category-overlay.png");
+    width: 7px;
 }
 
 calendar-event-gripbar {
@@ -698,9 +699,8 @@ calendar-event-box[status="CANCELLED"] .calendar-color-box {
 
 /* Navigation controls for the views */
 #calendar-nav-control {
-    background-color: #E8E8E8;
-    border: solid ThreeDShadow;
-    border-width: 1px 0 0 1px;
+    background-color: AppWorkspace;
+    -moz-border-start: 1px solid ThreeDShadow;
     padding-top: 1px;
 }
 
