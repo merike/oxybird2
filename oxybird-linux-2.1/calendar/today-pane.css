@@ -36,9 +36,11 @@
  * ***** END LICENSE BLOCK ***** */
 
 .today-subpane {
+  border-color: ThreeDShadow;
+  border-style: solid;
+  border-width: 1px 0;
+  margin-bottom: 3px;
   padding: 0px;
-  border: 1px solid ThreeDShadow;
-  margin: 3px;
 }
 
 #buttonspacer {
@@ -48,11 +50,21 @@
 #today-pane-panel {
   background-color: -moz-Dialog;
   color: -moz-DialogText;
-  border-left: 1px solid ThreeDShadow;
 }
 
-#agenda-panel {
-  margin: 3px;
+#today-pane-panel:-moz-lwtheme {
+  background-color: transparent;
+  border-top: 1px solid ThreeDShadow;
+}
+
+#agenda-panel:-moz-lwtheme > vbox,
+#today-pane-splitter:-moz-lwtheme,
+#todo-tab-panel:-moz-lwtheme {
+  background-color: -moz-Dialog;
+}
+
+#today-pane-panel:-moz-lwtheme > vbox {
+  text-shadow: none;
 }
 
 #mini-day-image {
@@ -62,6 +74,18 @@
 #mini-day-box,
 #today-minimonth-box {
   background-color: white;
+}
+
+#today-pane-splitter {
+  -moz-appearance: none;
+  border-bottom: 1px solid ThreeDShadow;
+  /* splitter grip area */
+  height: 5px;
+  /* make only the splitter border visible */
+  margin-top: -5px;
+  /* because of the negative margin needed to make the splitter visible */
+  position: relative;
+  z-index: 10;
 }
 
 #weekdayNameContainer {
@@ -86,6 +110,7 @@
 .miniday-nav-buttons {
   margin-top: 2px;
   list-style-image: url("chrome://calendar/skin/widgets/nav-buttons.png");
+  min-width: 19px;
 }
 
 #previous-day-button,
@@ -206,6 +231,7 @@
 
 #agenda-listbox {
   -moz-user-focus: normal;
+  margin: 3px;
 }
 
 agenda-checkbox-richlist-item {
