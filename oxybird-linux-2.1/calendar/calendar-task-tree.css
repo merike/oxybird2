@@ -91,7 +91,7 @@
 }
 
 .calendar-task-tree > treechildren::-moz-tree-cell-text(future) {
-    color: MenuText;
+    color: WindowText;
 }
 
 .calendar-task-tree > treechildren::-moz-tree-row(future, selected, focus) {
@@ -105,7 +105,7 @@
 .calendar-task-tree > treechildren::-moz-tree-cell-text(completed) {
     text-decoration: line-through;
     font-style: italic;
-    color: MenuText;
+    color: WindowText;
 }
 
 .calendar-task-tree > treechildren::-moz-tree-row(completed, selected, focus) {
@@ -118,7 +118,7 @@
 
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, completed),
 .calendar-task-tree-col-completed {
-    list-style-image: url(chrome://calendar/skin/unifinder-images.png);
+    list-style-image: url(chrome://calendar/skin/checkbox-images.png);
     -moz-image-region: rect(0 26px 13px 13px);
 }
 
@@ -126,39 +126,11 @@
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, overdue),
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, future),
 .calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress) {
-    list-style-image: url(chrome://calendar/skin/unifinder-images.png);
+    list-style-image: url(chrome://calendar/skin/checkbox-images.png);
     -moz-image-region: rect(0 13px 13px 0);
 }
 
-.calendar-task-tree-col-priority {
-    list-style-image: url(chrome://calendar/skin/unifinder-images.png);
-    -moz-image-region: rect(0 65px 13px 52px);
-}
-
-.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-priority, mediumpriority),
-.todo-due-image-class {
-    list-style-image: url(chrome://calendar/skin/unifinder-images.png);
-    -moz-image-region: rect(0 65px 13px 52px);
-}
-
-.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-priority, highpriority),
-.todo-due-image-class[highpriority="true"] {
-    list-style-image: url(chrome://calendar/skin/unifinder-images.png);
-    -moz-image-region: rect(0 104px 13px 91px);
-}
-
-.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-priority, lowpriority),
-.todo-due-image-class[lowpriority="true"] {
-    list-style-image: url(chrome://calendar/skin/unifinder-images.png);
-    -moz-image-region: rect(0 78px 13px 65px);
-}
-
-.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-priority, selected, highpriority) {
-    list-style-image: url(chrome://calendar/skin/unifinder-images.png);
-    -moz-image-region: rect(0 117px 13px 104px);
-}
-
-.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-priority, selected, lowpriority) {
-    list-style-image: url(chrome://calendar/skin/unifinder-images.png);
-    -moz-image-region: rect(0 91px 13px 78px);
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating) {
+    list-style-image: url(chrome://calendar/skin/checkbox-images.png);
+    -moz-image-region: rect(0 39px 13px 26px);
 }
