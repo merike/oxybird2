@@ -46,6 +46,15 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#msgcomposeWindow:-moz-lwtheme {
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#attachmentBucket {
+  width: 15em;
+}
+
 /* ::::: primary toolbar buttons ::::: */
  
 .toolbarbutton-1 {
@@ -222,17 +231,24 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   list-style-image: url("moz-icon://stock/gtk-paste?size=menu&state=disabled");
 }
 
+#priority-button:not(:-moz-lwtheme) > label {
+  color: MenuText;
+}
+
 /* ::::: special toolbar colors ::::: */
 
 #appcontent {
   border-top: 1px solid ThreeDShadow;
-  border-left: 1px solid ThreeDShadow;
-  border-right: 1px solid ThreeDHighlight;
+  border-bottom: 1px solid ThreeDShadow;
 }
 
 #attachmentbucket-sizer {
   border-top: none;
   border-bottom: none;
+}
+
+#attachmentBucketSize {
+  color: #888a85;
 }
 
 /* ::::: attachment reminder ::::: */
@@ -258,17 +274,19 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 
 /* XXX I should really have a selector rule here to select just .listcell-icon objects underneath the attachmentList listbox */
 
-.listcell-icon
-{
+.listcell-icon {
   -moz-margin-start: 2px;
   margin-top: 2px;
 }
 
 #compose-toolbar-sizer {
-  border-top-width: 1px;
-  border-left: none;
-  border-right: none;
-  -moz-border-top-colors: ThreeDHighlight;
+  -moz-appearance: none;
+  position: relative;
+  z-index: 10;
+  min-height: 0;
+  height: 5px;
+  margin-top: -5px;
+  border-bottom: 1px solid ThreeDShadow;
 }
 
 #msgSubject {
@@ -284,18 +302,25 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   
 #addressingWidget {
   -moz-user-focus: none;
+  -moz-appearance: none;
   width: 0;
-}  
+  border: none;
+  background-color: transparent;
+}
 
-#typecol-addressingWidget {
-  min-width: 9em;
-  border-right: 1px solid #CACAFF;
+#addressingWidget listboxbody {
+  margin: 1px 0;
+}
+
+#textcol-addressingWidget {
+  border: 1px solid threedshadow;
+  background-color: -moz-field;
 }
 
 .addressingWidgetItem,
 .dummy-row {
   border: none !important;
-  background-color: inherit !important;
+  background-color: transparent !important;
   color: inherit !important;
 }
 
@@ -304,13 +329,9 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   padding: 0px;
 }
 
-.addressingWidgetCell:first-child {
-  border-top: none;
-}
-
+.addressingWidgetCell:first-child,
 .dummy-row-cell:first-child {
-  border-top: none;
-  border-bottom: 1px solid #CACAFF;
+  border-bottom-color: transparent;
 }
 
 .person-icon {
@@ -318,17 +339,34 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/abcard.png");
 }
 
+.aw-menulist {
+  -moz-appearance: button;
+  -moz-margin-end: 7px;
+}
+
+.aw-menulist > .menulist-label-box {
+  margin: -3px 1px;
+}
+
 .aw-menulist > dropmarker {
   height: 11px; 
 }
 
 #MsgHeadersToolbar {
+  -moz-appearance: toolbar;
+  color: WindowText;
+  text-shadow: none;
   min-height: 132px;
 }
 
 /* ::::: format toolbar ::::: */
 
-#FormatToolbar > toolbarbutton {
+#FormatToolbar {
+  -moz-appearance: toolbar;
+  color: WindowText;
+}
+
+toolbarbutton.formatting-button {
   list-style-image: url("chrome://messenger/skin/messengercompose/format-buttons.png");
 }
 
@@ -465,6 +503,12 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 }
 
 /* ..... smiley menu ..... */
+
+#smileButtonMenu .menu-iconic-left {
+  /* Ensure that the smileys are visible even if the Gnome theme says menus
+     shouldn't have icons. */
+  visibility: visible;
+}
 
 #smileySmile > .menu-iconic-left {
   list-style-image: url("chrome://communicator/skin/icons/smileys/smiley-smile.png");
@@ -624,6 +668,12 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   background-color: Window;
 }
 
+#sidebar-box sidebarheader {
+  color: -moz-DialogText;
+  text-shadow: none;
+  background-color: -moz-Dialog;
+}
+
 /** Stock icons for the menu items. */
 #menu_NewMessage {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/addressbook-toolbar.png");
@@ -654,4 +704,16 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 
 #tasksMenuAddressBook {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/addrbook.png");
+}
+
+#sidebar-splitter {
+  -moz-appearance: none;
+  -moz-border-start: 1px solid ThreeDShadow;
+  /* splitter grip area */
+  width: 5px;
+  /* make only the splitter border visible */
+  -moz-margin-end: -5px;
+  /* because of the negative margin needed to make the splitter visible */
+  position: relative;
+  z-index: 10;
 }
