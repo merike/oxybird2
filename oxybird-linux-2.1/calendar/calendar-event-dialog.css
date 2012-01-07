@@ -21,6 +21,7 @@
  *   Michael Buettner <michael.buettner@sun.com>
  *   Markus Adrario <Mozilla@Adrario.de>
  *   Gianfranco Balza <bv1578@gmail.com>
+ *   Richard Marti <mozilla@paenglab.ch>
  *
  * Alternatively, the contents of this file may be used under the terms of
  * either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -76,7 +77,7 @@ label.label {
  *-------------------------------------------------------------------*/
 
 #keepduration-button {
-    list-style-image: url(chrome://calendar/skin/images/event-dialog-keepduration-button.png);
+    list-style-image: url(chrome://calendar/skin/event-dialog-keepduration-button.png);
     -moz-image-region: rect(0px 14px 24px 7px);
     padding-top: 3px;
     padding-bottom: 3px;
@@ -104,7 +105,7 @@ label.label {
 }
 
 .keepduration-link-image {
-    list-style-image: url(chrome://calendar/skin/images/event-dialog-keepduration-button.png);
+    list-style-image: url(chrome://calendar/skin/event-dialog-keepduration-button.png);
     -moz-margin-start: -1px;
 }
 
@@ -131,7 +132,7 @@ label.label {
  *-------------------------------------------------------------------*/
 
 .cal-event-toolbarbutton {
-    list-style-image: url("chrome://calendar/skin/calendar-event-dialog-toolbar.png");
+    list-style-image: url("chrome://calendar/skin/calendar-event-dialog-toolbar.png") !important;
 }
 
 /*--------------------------------------------------------------------
@@ -139,7 +140,7 @@ label.label {
  *-------------------------------------------------------------------*/
 
 toolbar[iconsize="small"] .cal-event-toolbarbutton {
-    list-style-image: url("chrome://calendar/skin/calendar-event-dialog-toolbar-small.png");
+    list-style-image: url("chrome://calendar/skin/calendar-event-dialog-toolbar-small.png") !important;
 }
 
 /*--------------------------------------------------------------------

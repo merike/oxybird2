@@ -147,8 +147,7 @@ tabpanels {
 }
 
 .tabmail-tab {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  list-style-image: url("moz-icon://stock/gtk-file?size=menu");
 }
 
 .tab-throbber {
@@ -172,8 +171,8 @@ tabpanels {
 
 /* Tab drag and drop */
 .tab-drop-indicator {
-  list-style-image: url(chrome://messenger/skin/icons/go-down.png);
-  margin-top: -16px;
+  list-style-image: url(chrome://messenger/skin/icons/tabDragIndicator.png);
+  margin-bottom: -11px;
 }
 
 /* In-tab close button */
@@ -241,8 +240,7 @@ tabpanels {
 
 /* All tabs menupopup */
 .alltabs-item {
-  list-style-image: url("chrome://global/skin/icons/folder-item.png");
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  list-style-image: url("moz-icon://stock/gtk-file?size=menu");
 }
 
 .alltabs-item[selected="true"] {
@@ -262,6 +260,10 @@ tabpanels {
   -moz-appearance: none !important;
   margin-bottom: -1px;
   -moz-padding-start: 0 !important;
+  list-style-image: url(chrome://global/skin/icons/expand.png);
+}
+
+.tabs-alltabs-button:hover > .toolbarbutton-menu-dropmarker {
   list-style-image: url(chrome://global/skin/icons/expand.png);
 }
 
