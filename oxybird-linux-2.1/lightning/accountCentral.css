@@ -34,13 +34,12 @@
  *
  * ***** END LICENSE BLOCK ***** */
 
-#lightning-newCalendar-row > hbox > label[chromedir="rtl"] {
-  background: url(chrome://calendar/skin/cal-icon32.png) right no-repeat !important;
+#lightning-newCalendar-row > hbox > label:-moz-locale-dir(rtl) {
+  background: url(chrome://calendar/skin/cal-icon22.png) right no-repeat !important;
+  background-position: right !important;
 }
 
 #lightning-newCalendar-row > hbox > label {
-  background: url(chrome://calendar/skin/cal-icon32.png) no-repeat !important;
-  padding-top: .55em;
-  padding-bottom: .55em;
+  background: url(chrome://calendar/skin/cal-icon22.png) no-repeat !important;
   -moz-padding-start: 45px;
 }
