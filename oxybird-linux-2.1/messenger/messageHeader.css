@@ -50,6 +50,13 @@
   padding: 0.4ex;
 }
 
+/* :::::  message in a tab ::::: */
+#displayDeck[collapsed="true"] + splitter + #messagepaneboxwrapper 
+.main-header-area {
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.3), 
+                                         rgba(255, 255, 255, 0) 19px);
+}
+
 /* ::::: msg header toolbars ::::: */
 
 #expandedHeaderView[show_header_mode="all"] {
@@ -318,11 +325,13 @@ window[inlinetoolbox] #wrapper-spring {
 }
 
 /* Only show the dummy smart reply button when customizing. */
-.inline-toolbox[doCustomization] #hdrSmartReplyButton > toolbarbutton {
+.inline-toolbox[doCustomization] #hdrSmartReplyButton > toolbarbutton,
+toolbarpaletteitem #hdrSmartReplyButton > toolbarbutton {
   display: none;
 }
 
-.inline-toolbox[doCustomization] #hdrDummyReplyButton {
+.inline-toolbox[doCustomization] #hdrDummyReplyButton,
+toolbarpaletteitem #hdrDummyReplyButton {
   display: -moz-box !important;
 }
 

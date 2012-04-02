@@ -61,12 +61,6 @@
   display: none;
 }
 
-autorepeatbutton:not([disabled="true"]):hover,
-autorepeatbutton:not([disabled="true"]):hover:active {
-  margin: 1px;
-  border: 1px inset ThreeDFace;
-  padding-top: 2px;
-  padding-bottom: 1px;
-  -moz-padding-start: 2px;
-  -moz-padding-end: 1px;
+autorepeatbutton {
+  border: 1px solid ThreeDShadow;
 }
