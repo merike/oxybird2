@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url(chrome://calendar/skin/common/calendar-task-view.css);
+
 #calendar-task-view-splitter {
      -moz-appearance: none;
     border-bottom: 1px solid ThreeDShadow;
@@ -14,150 +16,37 @@
     z-index: 10;
 }
 
-#calendar-header-name-column,
-#calendar-task-details-attachment-row > hbox {
-    -moz-padding-start: 0.1em;
-}
-
-#calendar-task-details-grid {
-    padding-top: 1px;
-    -moz-padding-start: 0;
-    -moz-padding-end: 0;
-    padding-bottom: 0.2em;
-}
-
 #other-actions-box {
     -moz-margin-end: -1px;
-    padding-bottom: 0.3em;
-}
-
-#calendar-task-details {
-    min-height: 6ex;
-}
-
-#task-addition-box {
-    border-left: 1px solid ThreeDShadow;
-    border-right: 0px;
-    border-bottom: 1px solid ThreeDShadow;
-}
-
-#calendar-task-details-description {
-    -moz-appearance: textfield;
-    border: 1px solid;
-    margin: 0;
-    font-family: serif;
-    font-size: 16px;
 }
 
 .task-details-name {
-    text-align: right;
     color: windowtext;
     opacity: 0.5; /* lower contrast */
-    background-color: transparent;
-    border: none;
 }
 
 #calendar-task-details-grid > rows > .item-date-row > .headline {
-    font-weight: normal;
     color: windowtext;
     opacity: 0.5; /* lower contrast */
 }
 
-#calendar-task-details-attachment-row {
-    margin-top: 3px;
-}
-
-#calendar-task-details-attachment-rows {
-    max-height: 60px;
-}
-
 .task-details-value {
-    text-align: left;
-    background-color: transparent;
-    border: none;
     color: WindowText;
-}
-
-#calendar-task-tree {
-    min-height: 98px;
-    border-left: 1px solid ThreeDShadow;
-    border-bottom: 1px solid ThreeDHighlight;
-    border-right: 1px solid ThreeDHighlight;
-}
-
-#calendar-task-tree-detail {
-    border: 1px solid ThreeDShadow;
-    margin: 3px;
-}
-
-#view-task-edit-field {
-    margin: 5px;
-}
-
-.task-edit-field[readonly="true"] {
-    color: GrayText;
 }
 
 #task-text-filter-field {
     margin: 5px;
 }
 
-#calendar-task-details-title {
-    font-weight: bold;
-}
-
-#unifinder-task-edit-field {
-    margin: 3px;
-}
-
-#unifinder-todo-tree > .calendar-task-tree {
-    margin-bottom: 3px;
-}
-
 /* ::::: task actions toolbar ::::: */
 
 #task-actions-toolbox {
     -moz-appearance: none;
-    border: none;
 }
 
 #task-actions-toolbar {
-    -moz-appearance: none;
-    -moz-box-pack: end;
     min-height: 0;
     padding: 0;
-    border: none;
-}
-
-#task-actions-toolbar toolbarpaletteitem toolbarseparator,
-#task-actions-toolbar toolbarseparator {
-    height: 26px;
-}
-
-#task-actions-toolbar toolbarspacer {
-    height: 20px;
-}
-
-window[toolboxId="task-actions-toolbox"] #wrapper-spring {
-    display: none;
-}
-
-window[toolboxId="task-actions-toolbox"] #smallicons,
-window[toolboxId="task-actions-toolbox"] button[icon="add"] {
-    display: none;
-}
-
-window[toolboxId="task-actions-toolbox"] #modelist menuitem:first-child {
-    display: none;
-}
-
-#task-actions-toolbox[doCustomization] {
-    background: grey;
-}
-
-#task-actions-toolbox[doCustomization] #task-actions-toolbar {
-    min-width: 100px;
-    min-height: 24px;
 }
 
 #task-actions-category {
@@ -183,13 +72,8 @@ window[toolboxId="task-actions-toolbox"] #modelist menuitem:first-child {
 #calendar-add-task-button {
     list-style-image: url(chrome://calendar/skin/toolbar-small.png);
     -moz-image-region: rect(0px 256px 16px 240px);
-    -moz-margin-start: 5px;
 }
 
 #calendar-add-task-button[disabled="true"] {
     -moz-image-region: rect(32px 256px 48px 240px);
-}
-
-#calendar-add-task-button > .toolbarbutton-text {
-    -moz-padding-start: 5px;
 }

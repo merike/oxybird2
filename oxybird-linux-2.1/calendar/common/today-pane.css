@@ -103,12 +103,16 @@
     -moz-padding-start: 0;
 }
 
-.today-closebutton:hover:active {
-  -moz-image-region: rect(0 48px 16px 32px);
+.today-closebutton {
+  -moz-image-region: rect(0 16px 16px 0);
 }
 
-.today-closebutton > .toolbarbutton-icon {
-  -moz-margin-end: 0px; /* override toolkit's default value */
+.today-closebutton:hover {
+  -moz-image-region: rect(0 32px 16px 16px);
+}
+
+.today-closebutton:hover:active {
+  -moz-image-region: rect(0 48px 16px 32px);
 }
 
 #agenda-toolbar {
@@ -124,9 +128,16 @@
  -moz-padding-start: 5px;
 }
 
+#todaypane-new-event-button {
+  list-style-image: url("chrome://calendar/skin/toolbar-small.png");
+}
+
 #agenda-listbox {
+  -moz-appearance: none;
   -moz-user-focus: normal;
-  margin: 3px;
+  margin: 3px 0 0;
+  border-top: 1px solid ThreeDShadow;
+  background-color: -moz-field;
 }
 
 agenda-checkbox-richlist-item {
