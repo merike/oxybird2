@@ -92,7 +92,8 @@
 /* ::::: attachment view ::::: */
 
 #attachmentList {
-  margin: 0;
+  -moz-appearance: none;
+  border-top: 1px solid ThreeDShadow;
   background-color: -moz-Field;
   color: -moz-FieldText;
 }
@@ -248,7 +249,6 @@ toolbarpaletteitem > #hdrReplyToSenderButton {
 
 .hdrReplyToSenderButton,
 .hdrDummyReplyButton,
-.hdrReplyOnlyButton,
 .hdrReplyButton {
   list-style-image: url("chrome://messenger/skin/icons/button-reply.png");
 }
@@ -304,12 +304,6 @@ toolbarpaletteitem #hdrDummyReplyButton {
 .inline-toolbar {
   -moz-box-pack: end;
 }
-
-/*
-.hdrTrashButton > .toolbarbutton-icon {
-  -moz-margin-end: 0px;
-}
-*/
 
 .msgHeaderView-flat-button {
   min-width: 1px !important;
@@ -587,11 +581,11 @@ mail-newsgroups-headerfield {
 }
 
 window[inlinetoolbox] #smallicons,
-window[inlinetoolbox] button[icon="add"] {
+window[inlinetoolbox] #newtoolbar {
   display: none;
 }
 
-window[inlinetoolbox] #modelist menuitem:first-child {
+window[inlinetoolbox] #modefull {
   display: none;
 }
 

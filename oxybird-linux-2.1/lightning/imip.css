@@ -2,36 +2,4 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-table {
-       background-color: #f0ece4;
-       border: 3px solid black;
-       border-collapse: collapse;
-       width: 40em;
-       -moz-margin-start: auto;
-       -moz-margin-end: auto;
-}
-td {
-       padding: 3px;
-       vertical-align: top;
-       width: 2em;
-       text-align: left;
-}
-td.header {
-       background-color: #0a6cd0;
-}
-td.description {
-       width: 9em;
-       text-align: right;
-}
-td.content {
-       width: 29em;
-       background-color: white;
-}
-td.content p {
-       white-space: pre-wrap;
-}
-p.header {
-       color: white;
-       font-size: 1em;
-       font-weight: bold;
-}
+@import url(chrome://lightning/skin/common/imip.css);
