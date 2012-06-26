@@ -250,19 +250,19 @@ toolbarpaletteitem > #hdrReplyToSenderButton {
 .hdrReplyToSenderButton,
 .hdrDummyReplyButton,
 .hdrReplyButton {
-  list-style-image: url("chrome://messenger/skin/icons/button-reply.png");
+  list-style-image: url("chrome://messenger/skin/icons/button-reply.svg");
 }
 
 .hdrReplyAllButton {
-  list-style-image: url("chrome://messenger/skin/icons/button-reply-all.png");
+  list-style-image: url("chrome://messenger/skin/icons/button-reply-all.svg");
 }
 
 .hdrReplyListButton {
-  list-style-image: url("chrome://messenger/skin/icons/button-reply-list.png");
+  list-style-image: url("chrome://messenger/skin/icons/button-reply-list.svg");
 }
 
 .hdrForwardButton {
-  list-style-image: url("chrome://messenger/skin/icons/button-forward.png");
+  list-style-image: url("chrome://messenger/skin/icons/button-forward.svg");
 }
 
 .hdrArchiveButton {
@@ -274,7 +274,7 @@ toolbarpaletteitem > #hdrReplyToSenderButton {
 }
 
 .hdrTrashButton {
-  list-style-image: url("chrome://messenger/skin/icons/button-delete.png");
+  list-style-image: url("chrome://messenger/skin/icons/button-delete.svg");
 }
 
 window[inlinetoolbox] #wrapper-spring {

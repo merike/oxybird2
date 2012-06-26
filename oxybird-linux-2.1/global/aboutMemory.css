@@ -2,17 +2,19 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+/* This file is used for both about:memory and about:compartments. */
+
 body.verbose {
   /* override setting in about.css */
   max-width: 100% !important;
 }
 
-body.non-verbose pre.tree {
+body.non-verbose pre.entries {
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
 
-.sectionHeader {
+h2 {
   background: #ddd;
   padding-left: .1em;
 }
@@ -21,7 +23,7 @@ body.non-verbose pre.tree {
   color: #f00;
 }
 
-.treeLine {
+.treeline {
   color: #888;
 }
 
@@ -56,6 +58,10 @@ body.non-verbose pre.tree {
   -moz-user-select: none;  /* no need to include this when cutting+pasting */
 }
 
+.debug {
+  font-size: 80%;
+}
+
 .hidden {
   display: none;
 }
@@ -64,3 +70,4 @@ body.non-verbose pre.tree {
   color: #fff;
   background-color: #f00;
 }
+
