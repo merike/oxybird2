@@ -125,7 +125,7 @@ tree.list {
   min-height:     50px;
 }
 
-#alignTypeSelect,label#alignLabel {
+#alignTypeSelect {
   -moz-margin-start: 5px;
 }
 
@@ -279,7 +279,7 @@ tree.list {
 }
 
 /* styles for an attribute tree-table */
-tree.AttributesTree {
+.AttributesTree {
   min-width : 200px;
   min-height: 200px;
 }
