@@ -271,11 +271,6 @@ imconv[attention] {
   background: inherit;
 }
 
-.textbox-textarea,
-notificationbox {
-  overflow-x: hidden;
-}
-
 
 .splitter {
   margin: 0;
