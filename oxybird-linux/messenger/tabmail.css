@@ -229,14 +229,14 @@ tabpanels {
 /* In-tab close button */
 .tab-close-button {
   -moz-appearance: none;
-  -moz-margin-end: -12px;
+  -moz-margin-end: -17px;
   padding: 5px;
   -moz-padding-start: 6px;
   border: none;
   position: relative;
   z-index: 2;
-  list-style-image: url("chrome://messenger/skin/close.png");
-  -moz-image-region: rect(0px, 14px, 14px, 0px);
+  list-style-image: url(icons/closeTab.png);
+  -moz-image-region: auto;
 }
 
 .tab-close-button > .toolbarbutton-icon {
@@ -248,19 +248,7 @@ tabpanels {
   /* Make this button focusable so clicking on it will not focus the tab while
      it's getting closed. */
   -moz-user-focus: normal;
-}
-
-.tabmail-tab[selected="true"] > .tab-close-button:hover:active,
-.tabmail-tab:not([selected="true"]) > .tab-close-button:hover:active {
-  -moz-image-region: rect(0px, 42px, 14px, 28px);
-}
-
-.tabmail-tab:not([selected="true"]) > .tab-close-button {
-  -moz-image-region: rect(0px, 56px, 14px, 42px);
-}
-
-.tabmail-tab:not([selected="true"]) > .tab-close-button:hover {
-  -moz-image-region: rect(0px, 28px, 14px, 14px);
+  list-style-image: url(icons/closeTab-active.png);
 }
 
 /**
