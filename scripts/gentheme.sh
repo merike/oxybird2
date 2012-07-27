@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ../oxybird-linux-2.1/
+cd ../oxybird-linux/
 rm oxybird-linux.jar
 mkdir chrome
 zip -r chrome/OxyBird2.jar aero calendar communicator editor global lightning messenger messenger-newsblog mozapps
