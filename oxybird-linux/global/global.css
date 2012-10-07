@@ -161,7 +161,7 @@ sidebarheader:-moz-lwtheme {
 }
 
 :root:-moz-lwtheme-darktext {
-  text-shadow: 0px -0.5px 1.5px white;
+  text-shadow: 0 -0.5px 1.5px white;
 }
 
 :root:-moz-lwtheme-brighttext {

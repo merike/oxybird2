@@ -283,7 +283,7 @@ imconv[attention] {
   border-style: none;
 }
 
-#logList {
+#logTree {
   margin: 0 0;
 }
 
@@ -356,26 +356,22 @@ imgroup[closed] .twisty {
   list-style-image: url('chrome://chat/skin/offline-16.png');
 }
 
+#chat-status-selector:hover > .statusMessageToolbarItem,
+.statusMessageToolbarItem:focus {
+  border-color: ThreeDShadow;
+}
 
-#statusTypeIcon {
-  margin: 0 0;
-  width: 16px;
-  height: 16px;
-  min-height: 16px;
-  min-width: 16px;
-  -moz-appearance: none;
-  background: transparent;
-  box-shadow: none;
+.statusMessageToolbarItem[statusType="offline"],
+.statusMessageToolbarItem[disabled] {
   border: none;
 }
 
-#statusTypeIcon dropmarker {
-  display: none;
-}
-
-
-#statusMessage {
-  margin: 0 8px;
+#chat-status-selector > .statusMessageToolbarItem[editing] {
+  -moz-appearance: none;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 4px;
+  border-color: ThreeDShadow;
+  background-color: -moz-field;
 }
 
 /* Adaptation of #folderpane_splitter -> #listSplitter, #threadpane-splitter -> #contextSplitter */
@@ -507,6 +503,7 @@ toolbar[iconsize="small"] #button-chat-accounts[disabled] {
 #statusTypeAvailable,
 .statusTypeIcon[status="available"],
 #imStatusAvailable,
+#appmenu_imStatusAvailable,
 richlistitem[state="connected"] .accountStateIcon {
   list-style-image: url("chrome://messenger/skin/icons/status.png");
   -moz-image-region: rect(0px 16px 16px 0px);
@@ -524,6 +521,7 @@ richlistitem[state="connected"] .accountStateIcon {
 .statusTypeIcon[status="offline"],
 .statusTypeIcon[status="invisible"],
 #imStatusOffline,
+#appmenu_imStatusOffline,
 richlistitem[state="disconnected"] .accountStateIcon {
   list-style-image: url("chrome://messenger/skin/icons/status.png");
   -moz-image-region: rect(0px 48px 16px 32px);
@@ -533,7 +531,9 @@ richlistitem[state="disconnected"] .accountStateIcon {
 #statusTypeIcon[status="away"],
 #statusTypeUnavailable,
 .statusTypeIcon[status="unavailable"],
-.statusTypeIcon[status="away"] {
+.statusTypeIcon[status="away"],
+#imStatusUnavailable,
+#appmenu_imStatusUnavailable {
   list-style-image: url("chrome://messenger/skin/icons/status.png");
   -moz-image-region: rect(0px 64px 16px 48px);
 }

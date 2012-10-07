@@ -336,14 +336,12 @@ toolbar[iconsize="small"] #button-mark[disabled] {
   -moz-image-region: rect(16px 144px 32px 128px) !important;
 }
 
-toolbar[iconsize="small"] #button-nextUnread,
-toolbar[iconsize="small"] #button-nextMsg {
+toolbar[iconsize="small"] #button-nextUnread {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
   -moz-image-region: rect(0px 160px 16px 144px);
 }
 
-toolbar[iconsize="small"] #button-nextUnread[disabled],
-toolbar[iconsize="small"] #button-nextMsg[disabled] {
+toolbar[iconsize="small"] #button-nextUnread[disabled] {
   -moz-image-region: rect(16px 160px 32px 144px) !important;
 } 
 
@@ -364,8 +362,7 @@ toolbar[iconsize="small"] #button-previousMsg {
   -moz-image-region: rect(0px 176px 16px 160px);
 }
 
-toolbar[iconsize="small"] #button-previousUnread[disabled],
-toolbar[iconsize="small"] #button-previousMsg[disabled] {
+toolbar[iconsize="small"] #button-previousUnread[disabled] {
   -moz-image-region: rect(16px 176px 32px 160px) !important;
 } 
 
