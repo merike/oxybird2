@@ -18,6 +18,11 @@
   background-image: url("chrome://messenger/skin/icons/insecure.png");
 }
 
+#security-button[loading="true"] {
+  background-image: url("chrome://global/skin/icons/loading_16.png");
+  background-position: 4px 2px;
+}
+
 #header {
   border-bottom: 1px solid black;
   overflow: hidden;
