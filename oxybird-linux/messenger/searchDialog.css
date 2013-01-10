@@ -52,10 +52,6 @@ textbox {
   margin: 0px 1px;
 }
 
-listbox {
-  padding-top: 2px;
-}
-
 .filler {
   -moz-padding-end: 22px;
 }
@@ -146,7 +142,7 @@ treechildren::-moz-tree-image(flaggedCol, flagged) {
 
 .junkStatusHeader {
   list-style-image: url("chrome://messenger/skin/icons/junk-col.svg");
-  -moz-padding-end: 3px;
+  -moz-padding-end: 3px; 
 }
 
 /* "unknown" now looks like "not junk".  see bug #182386 */
@@ -417,7 +413,6 @@ treechildren::-moz-tree-cell-text(lc-663333) {
 treechildren::-moz-tree-row(lc-663333, selected) {
   background-color: #663333;
 }
-
 
 treechildren::-moz-tree-cell-text(lc-FFFFCC) {
   color: #FFFFCC
