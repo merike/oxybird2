@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+
 #accountprotocol,
 #accountsummary {
   overflow: visible;
@@ -32,11 +33,15 @@
   background-position: center;
   -moz-margin-start: 1px;
   -moz-margin-end: 3px;
-  background-image: url("chrome://global/skin/icons/expand.png");
+  background-image: url("chrome://global/skin/icons/collapse.png");
 }
 
 
 .collapsable[closed="true"] .caption-icon {
-  background-image: url("chrome://global/skin/icons/collapse.png");
+  background-image: url("chrome://global/skin/icons/expand.png");
+}
+
+#value-column {
+  min-width: 15em;
 }
 

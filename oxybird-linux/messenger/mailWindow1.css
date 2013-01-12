@@ -405,17 +405,14 @@ treechildren::-moz-tree-cell-text(subjectCol) {
   max-width: 4em;
   border: 1px solid ThreeDShadow;
 }
-
 #quotaPanel .progress-bar {
   -moz-appearance: none;
   background-color: #88AAFF;
   opacity: .5;
 }
-
 #quotaPanel[alert="warning"] .progress-bar {
   background-color: orange;
 }
-
 #quotaPanel[alert="critical"] .progress-bar {
   background-color: red;
   opacity: .6;

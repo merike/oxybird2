@@ -186,11 +186,11 @@ radio[pane=paneLightning] {
 }
 
 #calendar-status-todaypane-button > .toolbarbutton-icon-end {
-  list-style-image: url(chrome://global/skin/icons/collapse.png);
+  list-style-image: url(chrome://global/skin/icons/up.png);
 }
 
 #calendar-status-todaypane-button[checked="true"] > .toolbarbutton-icon-end {
-  list-style-image: url(chrome://global/skin/icons/expand.png);
+  list-style-image: url(chrome://global/skin/icons/collapse.png);
 }
 
 #calMinimonthBox {

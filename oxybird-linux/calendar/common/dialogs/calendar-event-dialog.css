@@ -363,7 +363,6 @@ dialog[systemcolors] .addressingWidgetCell {
     list-style-image: url(chrome://calendar/skin/calendar-event-dialog-attendees.png);
     -moz-image-region: rect(0px 97px 14px 84px);
 }
-
 .zoom-in-icon[disabled="true"] {
     -moz-image-region: rect(14px 97px 28px 84px);
 }
@@ -373,7 +372,6 @@ dialog[systemcolors] .addressingWidgetCell {
     list-style-image: url(chrome://calendar/skin/calendar-event-dialog-attendees.png);
     -moz-image-region: rect(0px 110px 14px 97px);
 }
-
 .zoom-out-icon[disabled="true"] {
     -moz-image-region: rect(14px 110px 28px 97px);
 }
@@ -383,7 +381,6 @@ dialog[systemcolors] .addressingWidgetCell {
     list-style-image: url(chrome://calendar/skin/calendar-event-dialog-attendees.png);
     -moz-image-region: rect(0px 124px 14px 110px);
 }
-
 .left-icon[disabled="true"] {
     -moz-image-region: rect(14px 124px 28px 110px);
 }
@@ -393,7 +390,6 @@ dialog[systemcolors] .addressingWidgetCell {
     list-style-image: url(chrome://calendar/skin/calendar-event-dialog-attendees.png);
     -moz-image-region: rect(0px 138px 14px 124px);
 }
-
 .right-icon[disabled="true"] {
     -moz-image-region: rect(14px 138px 28px 124px);
 }

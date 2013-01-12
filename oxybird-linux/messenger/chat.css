@@ -74,6 +74,10 @@ imconv[attention] {
   -moz-margin-end: 0;
 }
 
+imcontact[aliasing] .contactDisplayName {
+  -moz-binding: url("chrome://global/content/bindings/textbox.xml#textbox");
+}
+
 .contactStatusText,
 .convStatusText {
   -moz-margin-start: 0;
@@ -331,29 +335,34 @@ imconv[attention] {
   color: HighlightText !important;
 }
 
+
 /* from instantbird/themes/blist.css */
 imgroup .twisty {
-  list-style-image: url("chrome://global/skin/icons/expand.png");
+  list-style-image: url("chrome://global/skin/icons/collapse.png");
 }
 
 imgroup[closed] .twisty {
-  list-style-image: url("chrome://global/skin/icons/collapse.png");
+  list-style-image: url("chrome://global/skin/icons/expand.png");
 }
 
 #searchResultConv > .prplBuddyIcon > .protoIcon {
   list-style-image: url(moz-icon://stock/gtk-find?size=menu);
 }
 
-#imStatusAvailable {
-  list-style-image: url('chrome://chat/skin/available-16.png');
+#statusTypeIcon {
+  min-width: 40px;
 }
 
-#imStatusUnavailable {
-  list-style-image: url('chrome://chat/skin/away-16.png');
+/* show the status icon also in text mode */
+toolbar[mode="text"] #statusTypeIcon > .toolbarbutton-icon {
+  display: -moz-box;
 }
 
-#imStatusOffline {
-  list-style-image: url('chrome://chat/skin/offline-16.png');
+.statusMessageToolbarItem {
+  margin: 2px 4px;
+  -moz-margin-start: -1px;
+  padding: 3px 5px 4px;
+  border: 1px solid transparent;
 }
 
 #chat-status-selector:hover > .statusMessageToolbarItem,
@@ -555,4 +564,10 @@ richlistitem[state="disconnected"] .accountStateIcon {
 #setStatusTypeMenupopup .menu-iconic-icon,
 #imAccountsStatus .menu-iconic-icon {
   visibility: visible;
+}
+
+.tabmail-tab[type="chat"],
+.alltabs-item[type="chat"] {
+  list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
+  -moz-image-region: rect(0px 240px 16px 224px);
 }

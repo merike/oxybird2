@@ -62,7 +62,6 @@
 #todaypane-new-event-button {
   -moz-image-region: rect(0px 16px 16px 0px);
 }
-
 #todaypane-new-event-button[disabled="true"],
 #todaypane-new-event-button[disabled="true"]:hover,
 #todaypane-new-event-button[disabled="true"]:hover:active {

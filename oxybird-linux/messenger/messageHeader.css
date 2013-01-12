@@ -107,14 +107,14 @@
 }
 
 #attachmentToggle {
-  list-style-image: url(chrome://global/skin/icons/collapse.png);
+  list-style-image: url(chrome://global/skin/icons/up.png);
   -moz-appearance: toolbarbutton;
   min-width: 16px !important;
   -moz-user-focus: normal;
 }
 
 #attachmentToggle[checked="true"] {
-  list-style-image: url(chrome://global/skin/icons/expand.png);
+  list-style-image: url(chrome://global/skin/icons/collapse.png);
   -moz-appearance: button;
   -moz-user-focus: none;
 }
@@ -547,6 +547,27 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
 
 .emailStar[hascard="true"] {
   list-style-image: url("chrome://messenger/skin/contactStarred.png");
+}
+
+.emailPresence {
+  padding: 0px;
+  -moz-margin-start: -2px !important;
+  -moz-image-region: rect(6px, 16px, 16px, 6px);
+}
+
+.emailStar[chatStatus],
+.emailPresence:not([chatStatus]) {
+  display: none;
+}
+
+.emailPresence[chatStatus="available"] {
+  list-style-image: url("chrome://messenger/skin/icons/status-small.png");
+  -moz-image-region: rect(0px 10px 10px 0px);
+}
+
+.emailPresence[chatStatus="away"] {
+  list-style-image: url("chrome://messenger/skin/icons/status-small.png");
+  -moz-image-region: rect(0px 40px 10px 30px);
 }
 
 .emailPopup {

@@ -267,11 +267,11 @@ tabpanels {
   -moz-appearance: none !important;
   margin-bottom: -1px;
   -moz-padding-start: 0 !important;
-  list-style-image: url(chrome://global/skin/icons/expand.png);
+  list-style-image: url(chrome://global/skin/icons/collapse.png);
 }
 
 .tabs-alltabs-button:hover > .toolbarbutton-menu-dropmarker {
-  list-style-image: url(chrome://global/skin/icons/expand.png);
+  list-style-image: url(chrome://global/skin/icons/collapse.png);
 }
 
 .tabs-alltabs-button > .toolbarbutton-icon {
