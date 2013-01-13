@@ -47,6 +47,7 @@
   background-image: none;
 }
 
+
 /*** notification icons ***/
 
 .warning-icon {
@@ -228,6 +229,7 @@
 #category-recentUpdates > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-recent.png");
 }
+
 
 /*** header ***/
 
