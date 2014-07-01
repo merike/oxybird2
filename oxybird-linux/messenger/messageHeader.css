@@ -6,7 +6,7 @@
   == Styles for the header toolbars of a mail message.
   ======================================================================= */
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@import url("chrome://messenger/skin/shared/messageHeader.css");
 
 /* ::::: for the entire area ::::: */
 .main-header-area {
@@ -19,7 +19,7 @@
 /* :::::  message in a tab ::::: */
 #displayDeck[collapsed="true"] + splitter + #messagepaneboxwrapper
 .main-header-area {
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.3), 
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3),
                                     rgba(255, 255, 255, 0) 19px);
 }
 
@@ -224,16 +224,7 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
 }
 
 .hdrTagButton {
-  list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
-  -moz-image-region: rect(0px 192px 16px 176px);
-}
-
-window[inlinetoolbox] #wrapper-spring {
-  display: none;
-}
-
-.inline-toolbox[doCustomization] {
-  background: grey;
+  list-style-image: url("chrome://messenger/skin/icons/button-tag.png");
 }
 
 .inline-toolbox[doCustomization] .inline-toolbar {
@@ -342,22 +333,6 @@ window[inlinetoolbox] #wrapper-spring {
   font-weight: bold;
 }
 
-.moreIndicator:hover {
-  text-decoration: underline;
-  color: darkred;
-}
-
-.tagvalue {
-  padding: 0 0.5ex;
-  -moz-margin-start: 0px;
-  background-image: url("chrome://messenger/skin/tagbg.png");
-  border-radius: 3px;
-  border-width: 0.5px;
-  border-style: outset;
-  text-shadow: 0 1px 0 rgba(238,238,236,0.4); /* Tango Alumninum 1 */
-  color: #111111;
-}
-
 /* ::::: msg header message ids ::::: */
 
 .messageIdDisplayButton {
@@ -443,21 +418,6 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
   padding: 0px;
   -moz-margin-start: -2px !important;
   -moz-image-region: rect(6px, 16px, 16px, 6px);
-}
-
-.emailStar[chatStatus],
-.emailPresence:not([chatStatus]) {
-  display: none;
-}
-
-.emailPresence[chatStatus="available"] {
-  list-style-image: url("chrome://messenger/skin/icons/status-small.png");
-  -moz-image-region: rect(0px 10px 10px 0px);
-}
-
-.emailPresence[chatStatus="away"] {
-  list-style-image: url("chrome://messenger/skin/icons/status-small.png");
-  -moz-image-region: rect(0px 40px 10px 30px);
 }
 
 .emailPopup {

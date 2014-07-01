@@ -9,7 +9,7 @@ calendar-category-box:not([categories]) {
 
 .calendar-category-box-gradient {
     width: 7px;
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.38), transparent) !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.38), transparent) !important;
     border-left: 1px solid rgba(255, 255, 255, 0.38);
 }
 

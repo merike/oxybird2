@@ -67,22 +67,6 @@ window {
   background: -moz-dialog;
 }
 
-.icon[state='strong'] {
-  background-image: url("chrome://messenger/skin/icons/secure.png");
-}
-
-.icon[state='failed'] {
-  background-image: url("chrome://messenger/skin/icons/failed.png");
-}
-
-.icon[state='probing'] {
-  background-image: url("chrome://messenger/skin/icons/probing.png");
-}
-
-.icon[state='weak'] {
-  background-image: url("chrome://messenger/skin/icons/insecure.png");
-}
-
 #warningbox {
   width: 800px;
   height: 485px;
@@ -221,7 +205,7 @@ menulist[disabled="true"] {
 }
 
 #status_area[status=loading] #status_img_after {
-  background: url("chrome://global/skin/icons/loading_16.png") no-repeat;
+  background: url("chrome://messenger/skin/icons/loading.png") no-repeat;
   width: 16px;
   height: 16px;
 }
