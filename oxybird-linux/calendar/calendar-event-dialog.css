@@ -141,22 +141,24 @@ toolbar[iconsize="small"] #button-save:hover {
 #button-delete.cal-event-toolbarbutton {
     -moz-image-region: rect(0px 408px 24px 384px);
 }
-#button-delete[disabled="true"],
-#button-delete[disabled="true"]:hover {
+#button-delete.cal-event-toolbarbutton[disabled="true"],
+#button-delete.cal-event-toolbarbutton[disabled="true"]:hover {
     -moz-image-region: rect(48px 408px 72px 384px);
 }
-#button-delete:hover {
+#button-delete.cal-event-toolbarbutton:hover,
+#button-delete.cal-event-toolbarbutton:hover:active {
     -moz-image-region: rect(24px 408px 48px 384px);
 }
 
 toolbar[iconsize="small"] #button-delete {
     -moz-image-region: rect(0px 272px 16px 256px);
 }
-toolbar[iconsize="small"] #button-delete[disabled="true"],
-toolbar[iconsize="small"] #button-delete[disabled="true"]:hover {
+toolbar[iconsize="small"] #button-delete.cal-event-toolbarbutton[disabled="true"],
+toolbar[iconsize="small"] #button-delete.cal-event-toolbarbutton[disabled="true"]:hover {
     -moz-image-region: rect(32px 272px 48px 256px);
 }
-toolbar[iconsize="small"] #button-delete:hover {
+toolbar[iconsize="small"] #button-delete.cal-event-toolbarbutton:hover,
+toolbar[iconsize="small"] #button-delete.cal-event-toolbarbutton:hover:active {
     -moz-image-region: rect(16px 272px 32px 256px);
 }
 

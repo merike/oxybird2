@@ -63,6 +63,10 @@ imconv[attention] {
   color: blue;
 }
 
+.conv-hbox {
+  -moz-box-align: center;
+}
+
 /* From instantbird/themes/blist.css */
 .contactStatusText,
 .convStatusText {
@@ -120,7 +124,7 @@ imcontact[aliasing] .contactDisplayName {
 }
 
 
-/* From instantbird/themes/conversation.css */
+/* From im/themes/conversation.css */
 .browser {
   margin: 0 0;
 }
@@ -143,16 +147,22 @@ imcontact[aliasing] .contactDisplayName {
   border-bottom: 1px solid ThreeDShadow;
 }
 
-.userIcon {
+.userIconHolder {
   border: 2px solid rgba(0,0,0,0.15);
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.userIcon,
+.userIconHolder {
   max-width: 48px;
   max-height: 48px;
   width: 48px;
   height: 48px;
 }
 
-.userIcon:not([src]) {
+.userIcon:not([src]),
+.userIconHolder:not([userIcon]) {
   display: none;
 }
 
@@ -224,6 +234,7 @@ imcontact[aliasing] .contactDisplayName {
   list-style-image: url('chrome://chat/skin/unknown.png');
 }
 
+/* corresponds to im/themes/conversation.css @media all and (min-height: 251px) */
 .statusImageStack,
 .displayNameAndstatusMessageStack {
   margin: 2px 2px;
@@ -252,7 +263,7 @@ imcontact[aliasing] .contactDisplayName {
   margin: 32px 0 0;
 }
 
-.userIcon[src] + .statusTypeIcon {
+.userIconHolder[userIcon] + .statusTypeIcon {
   margin-left: 32px;
 }
 
@@ -267,8 +278,8 @@ imcontact[aliasing] .contactDisplayName {
 
 .conv-textbox {
   margin: 0 0;
-  padding: 0 0;
-  -moz-box-sizing: content-box;
+  padding: 2px;
+  box-sizing: content-box;
 }
 
 .conv-textbox > .textbox-input-box {

@@ -34,10 +34,6 @@ mailattachcount {
 
 /* ::::: message text, incl. quotes ::::: */
 
-a {
-  color: rgb(32,74,135); /* Sky Blue 3 */
-}
-
 .moz-text-flowed blockquote,
 .moz-text-plain blockquote {
   margin: 0;
@@ -78,32 +74,37 @@ a {
   height: 100%;
 }
 
-/* ::::: attached images ::::: */
-.moz-attached-image[overflowing="true"] { 
-  cursor: -moz-zoom-out;
+/* ::::: images ::::: */
+img {
+  image-orientation: from-image;
 }
 
-.moz-attached-image[isshrunk="true"] { 
-  cursor: -moz-zoom-in;
-  max-width: 100%;
+img[overflowing]:not([shrinktofit]) {
+  cursor: zoom-out;
+  width: auto !important;
 }
 
+img[overflowing][shrinktofit] {
+  cursor: zoom-in;
+  max-width: 100% !important;
+  height: auto !important;
+}
 
 /* ::::: vcard ::::: */
 
 .moz-vcard-table {
-  border-radius: 8px;
-  border: thin solid gray;
   margin-top: 10px;
+  border-radius: 5px;
+  border-color: ThreeDLightShadow;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, .1);
 }
 
 .moz-vcard-property {
   font-size: 80%;
   color: gray;
 }
-
-.moz-vcard-title-property {
-} 
 
 .moz-vcard-badge {
   height: 24px;
@@ -115,7 +116,7 @@ a {
 
 .moz-vcard-badge:hover {
   -moz-image-region: rect(30px 30px 60px 0px);
-} 
+}
 
 .moz-vcard-badge:focus {
   outline: none;

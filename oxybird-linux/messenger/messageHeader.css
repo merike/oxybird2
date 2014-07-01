@@ -17,10 +17,10 @@
 }
 
 /* :::::  message in a tab ::::: */
-#displayDeck[collapsed="true"] + splitter + #messagepaneboxwrapper 
+#displayDeck[collapsed="true"] + splitter + #messagepaneboxwrapper
 .main-header-area {
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.3), 
-                                         rgba(255, 255, 255, 0) 19px);
+                                    rgba(255, 255, 255, 0) 19px);
 }
 
 /* ::::: msg header toolbars ::::: */
@@ -29,24 +29,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 14em;
-}
-
-/* ::::: msg header buttons ::::: */
-.headerContainer
-{
-  min-width: 1px;
-}
-
-#expandedHeaderRows > row,
-#expandedHeader2Rows > row {
-  /* Ensure that the header names and values are aligned with each other. */
-  -moz-box-align: baseline;
-}
-
-#expandedHeadersTopBox {
-  /* Use the HTML layout model to allow the message header toolbar to float to
-     the right of the From field. */
-  display: block;
 }
 
 #expandedBoxSpacer {
@@ -78,23 +60,6 @@
 
 .inline-toolbar toolbarspacer {
   height: 23px;
-}
-
-#expandedsubjectBox > .headerValue {
-  font-weight: bold;
-}
-
-/* ::::: edit message bar ::::: */
-
-#editMessageBox {
-  min-width: 1px;
-  border-bottom-left-radius: 0.2em;
-  border-bottom-right-radius: 0.2em;
-}
-
-#editMessageDescription {
-  font-style: italic;
-  font-weight: bolder;
 }
 
 /* ::::: attachment view ::::: */
@@ -129,31 +94,11 @@
   -moz-margin-start: 5px;
 }
 
-#attachmentCount {
-  margin: 0;
-  padding: 2px 0;
-  -moz-margin-start: 2px;
-  -moz-margin-end: 1px;
-}
-
-#attachmentName {
-  -moz-user-focus: normal;
-  margin: 0;
-  -moz-margin-end: -3px;
-  padding: 1px 2px;
-  border-radius: 2px;
-  border: 1px dotted transparent;
-}
-
 #attachmentName:hover,
 #attachmentName[selected="true"] {
   cursor: pointer;
   color: HighlightText;
   background-color: Highlight;
-}
-
-#attachmentName:focus {
-  border-color: Highlight;
 }
 
 #attachmentSize {
@@ -177,10 +122,6 @@
   font-size: 100%;
   padding: 0 !important;
   margin: 0 !important;
-}
-
-#header-view-toolbar .msgHeaderView-button[disabled="true"] {
-  display: none;
 }
 
 .dateLabel {
@@ -251,10 +192,6 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
   -moz-margin-start: 2px !important;
 }
 
-toolbarpaletteitem > #hdrReplyToSenderButton {
-  display: -moz-box;
-}
-
 .hdrReplyToSenderButton,
 .hdrDummyReplyButton,
 .hdrReplyButton {
@@ -304,17 +241,6 @@ window[inlinetoolbox] #wrapper-spring {
   min-height: 10px;
 }
 
-/* Only show the dummy smart reply button when customizing. */
-.inline-toolbox[doCustomization] #hdrSmartReplyButton > toolbarbutton,
-toolbarpaletteitem #hdrSmartReplyButton > toolbarbutton {
-  display: none;
-}
-
-.inline-toolbox[doCustomization] #hdrDummyReplyButton,
-toolbarpaletteitem #hdrDummyReplyButton {
-  display: -moz-box !important;
-}
-
 .inline-toolbar {
   -moz-box-pack: end;
 }
@@ -355,7 +281,7 @@ toolbarpaletteitem #hdrDummyReplyButton {
 
 .msgHeaderView-flat-button[type="menu-button"] > .button-menubutton-button:hover {
   border-right: 2px solid ButtonShadow;
-} 
+}
 
 .msgHeaderView-flat-button[secondary="true"] {
   background: none;
@@ -377,7 +303,7 @@ toolbarpaletteitem #hdrDummyReplyButton {
   background-color: transparent;
   padding: 0px;
   margin-top: 0;
-  -moz-margin-end: 0;
+  -moz-margin-end: 3px;
 }
 
 .headerValueBox {
@@ -402,30 +328,14 @@ toolbarpaletteitem #hdrDummyReplyButton {
   background-color: transparent;
 }
 
-.headerValue[containsEmail="true"] {
-  -moz-margin-start: 0px !important;
-}
-
-.headerValueBox[singleline="true"] > .headerValue[containsEmail="true"] {
-  white-space: nowrap;
-}
-
-.headerValueBox[singleline="true"] {
-  overflow: hidden;
-}
-
 .headerValueUrl {
   cursor: pointer;
-  color: -moz-nativehyperlinktext;
+  color: -moz-hyperlinktext;
   text-decoration: underline;
 }
 
 .headerValueUrl:hover {
-  color: red;
-}
-
-.headerField {
-  color: inherit;
+  color: -moz-activehyperlinktext;
 }
 
 .moreIndicator {
@@ -452,14 +362,14 @@ toolbarpaletteitem #hdrDummyReplyButton {
 
 .messageIdDisplayButton {
   cursor: pointer;
-  color: -moz-nativehyperlinktext;
+  color: -moz-hyperlinktext;
   text-decoration: underline;
   margin: 0;
   background-color: transparent;
 }
 
 .messageIdDisplayButton:hover {
-  color: #FF0000;
+  color: -moz-activehyperlinktext;
 }
 
 .messageIdDisplayImage {
@@ -502,28 +412,8 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
   -moz-margin-start: -3px; /* squeeze it inside the bubble, by the star */
 }
 
-/* Because there's no star for newsgroups like there is for email addresses,
- * pushing it back the same number of pixels as emailSeparator causes
- * the comma to be drawn too close to the last letter, which looks bad, so
- * using a separate rule here.
- */
-.newsgroupSeparator {
-  -moz-margin-start: -2px;
-}
-
 .emailDisplayButton:focus {
   border: 1px dotted Highlight;
-}
-
-.emailStar:focus {
-  border: 1px dotted;
-}
-
-.emaillabel,
-.newsgrouplabel {
-  padding: 0px !important;  /* override <label> defaults */
-  margin: 0px !important;  /* override <label> defaults */
-  overflow: hidden;
 }
 
 .emailStar {
@@ -607,27 +497,9 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
   list-style-image: url("chrome://global/skin/tree/twisty-open.png");
 }
 
-mail-multi-emailHeaderField,
-mail-headerfield,
-mail-newsgroups-headerfield {
-  margin: 0;
-  padding: 0;
-  -moz-box-align: baseline;
-}
-
 window[inlinetoolbox] #smallicons,
 window[inlinetoolbox] #newtoolbar {
   display: none;
-}
-
-window[inlinetoolbox] #modefull {
-  display: none;
-}
-
-mail-headerfield > .headerValue {
-  -moz-user-focus: normal;
-  -moz-user-select: text;
-  word-wrap: break-word;
 }
 
 /* This is a workaround for #562608 in the rare case where the buttons_have_icons gconf key is set to true */
@@ -643,8 +515,4 @@ mail-headerfield > .headerValue {
 #header-view-toolbox {
   float: right;
   padding-top: 2px;
-}
-
-#header-view-toolbox:-moz-locale-dir(rtl) {
-  float: left;
 }

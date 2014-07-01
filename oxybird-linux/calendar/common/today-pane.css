@@ -42,7 +42,7 @@
 }
 
 #mini-day-image {
-  background-image: -moz-linear-gradient(transparent, transparent 48%,
+  background-image: linear-gradient(transparent, transparent 48%,
                     rgba(0, 0, 0, .02) 52%, rgba(0, 0, 0, .1));
 }
 
@@ -148,13 +148,14 @@ agenda-checkbox-richlist-item {
 agenda-richlist-item {
   -moz-binding: url("chrome://calendar/content/agenda-listbox.xml#agenda-richlist-item");
   -moz-user-focus: normal;
-  overflow: hidden;
 }
 
 agenda-allday-richlist-item {
   -moz-binding: url("chrome://calendar/content/agenda-listbox.xml#agenda-allday-richlist-item");
   -moz-user-focus: normal;
-  overflow: hidden;
+}
+.wrap {
+  overflow: visible;
 }
 
 .agenda-container-box {
@@ -202,6 +203,10 @@ agenda-allday-richlist-item {
   background-color: -moz-dialog;
 }
 
+.agenda-allday-container-box .item-classification-box {
+  display: none;
+}
+
 .agenda-event-title {
   margin-top: 0px;
 }
@@ -232,6 +237,10 @@ agenda-allday-richlist-item {
   width: 10px;
   height: 10px;
   display: none;
+}
+
+.agenda-allday-container-box .agenda-multiDayEvent-image {
+  margin-top: 0.6em;
 }
 
 .agenda-multiDayEvent-image[type="start"] {

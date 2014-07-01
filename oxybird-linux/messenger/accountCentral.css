@@ -60,20 +60,36 @@ spacer.big {
 
 /* ::::: links ::::: */
 
-.acctCentralLinkText {
-  cursor: pointer;
+.acctCentralText {
   -moz-padding-start: 45px;
   margin-top: .55em;
   margin-bottom: .55em;
   min-height: 24px; /* icon height */
 }
 
-.acctCentralLinkText:hover {
+.acctCentralNewAcctText {
+  color: WindowText;
+  -moz-padding-start: 20px;
+  -moz-padding-end: 10px;
+}
+
+.acctCentralLinkText {
+  cursor: pointer;
+}
+
+.acctCentralLinkText:hover,
+.acctCentralLinkText:focus {
   color: -moz-nativehyperlinktext;
 }
 
 .acctCentralLinkText:active {
   color: -moz-activehyperlinktext;
+}
+
+#CreateAccountsList {
+  display: block;
+  -moz-padding-start: 45px;
+  height: 50px;
 }
 
 #ReadMessages label {
@@ -102,10 +118,12 @@ spacer.big {
 
 #CreateAccount label {
   background: url("chrome://messenger/skin/accountcentral/create-account.png")  no-repeat !important;
+  background-position: 0% -2px !important;
 }
 
 #CreateAccount label:-moz-locale-dir(rtl) {
   background: url("chrome://messenger/skin/accountcentral/create-account.png") right no-repeat !important;
+  background-position: 0% -2px !important;
 }
 
 #SearchMessages label {

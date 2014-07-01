@@ -8,27 +8,15 @@
 
 @import url("chrome://messenger/skin/");
 @import url("chrome://messenger/skin/addressbook/addressbook.css");
-  
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#abContactsPanel 
-{
+#abContactsPanel {
   -moz-appearance: toolbox;
   background-color: -moz-Dialog;
 }
 
-#results_box
-{
-  background-color: transparent;
-}
-
-#GeneratedName
-{
-  background-color: transparent;
-}
-
-#PrimaryEmail
-{
+#results_box {
   background-color: transparent;
 }
 

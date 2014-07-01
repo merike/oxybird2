@@ -11,7 +11,17 @@ daypicker {
 }
 
 daypicker[mode="monthly-days"] {
-  width: 21px;
+  width: 32px;
+  height: 15px;
+}
+
+daypicker[mode="daypicker-weekday"] {
+  min-width: 36px;
+  height: 32px;
+}
+
+daypicker[mode="monthly-days"][bottom="true"][right="true"] {
+  width: 128px;
   height: 15px;
 }
 
