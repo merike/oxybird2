@@ -41,7 +41,7 @@
 }
 
 #today-button:hover {
-  list-style-image: url("chrome://calendar/skin/widgets/nav-today-hov.svg");
+  list-style-image: url("chrome://calendar/skin/common/widgets/nav-today-hov.svg");
 }
 
 #miniday-dropdown-button {

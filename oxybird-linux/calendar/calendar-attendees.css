@@ -10,7 +10,7 @@
 
 .status-icon {
     margin: 0 3px;
-    list-style-image: url(chrome://calendar/skin/calendar-event-dialog-attendees.png);
+    list-style-image: url(chrome://calendar/skin/common/calendar-event-dialog-attendees.png);
     -moz-image-region: rect(0px 48px 14px 36px);
 }
 

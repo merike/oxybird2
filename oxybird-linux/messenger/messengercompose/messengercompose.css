@@ -320,6 +320,13 @@ treechildren::-moz-tree-image(remote-err) {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/remote-addrbook-error.png");
 }
 
+treechildren::-moz-tree-image(subscribed-news) {
+  -moz-margin-start: 3px;
+  -moz-margin-end: 2px;
+  list-style-image: url("chrome://messenger/skin/icons/folder-pane.png");
+  -moz-image-region: rect(208px 16px 224px 0px);
+}
+
 /* ::::: addressing widget ::::: */
 
 .autocomplete-treebody::-moz-tree-cell-text(comment) {
@@ -363,9 +370,13 @@ treechildren::-moz-tree-image(remote-err) {
   border-bottom-color: transparent;
 }
 
-.person-icon {
-  margin: 0 3px;
-  list-style-image: url("chrome://messenger/skin/addressbook/icons/abcard.png");
+.textbox-addressingWidget[focused="true"],
+.textbox-addressingWidget:hover {
+  background-color: -moz-field;
+  -moz-border-top-colors: ThreeDShadow ThreeDHighlight !important;
+  -moz-border-right-colors: ThreeDShadow ThreeDHighlight !important;
+  -moz-border-bottom-colors: ThreeDShadow ThreeDHighlight !important;
+  -moz-border-left-colors: ThreeDShadow ThreeDHighlight !important;
 }
 
 .aw-menulist {
@@ -421,7 +432,38 @@ treechildren::-moz-tree-image(remote-err) {
   -moz-appearance: none !important;
   color: WindowText;
   text-shadow: none;
-  min-height: 132px;
+  background-image: url("chrome://messenger/skin/messengercompose/linux-noise.png");
+  padding-top: 3px;
+}
+
+#identityLabel {
+  padding-top: 3px;
+}
+
+#msgIdentity {
+  -moz-appearance: none;
+  margin-right: 5px;
+  margin-bottom: 0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  -moz-padding-start: 2px;
+  -moz-padding-end: 30px;
+  background: transparent;
+  height: 22px;
+  line-height: 1;
+  border: 2px solid transparent;
+  -moz-border-bottom-colors: ThreeDShadow ThreeDHighlight;
+  background: url("chrome://global/skin/arrow/arrow-dn.gif") no-repeat;
+  background-position: 99%;
+  transition: border .2s, background-color .2s;
+}
+
+#msgIdentity:hover {
+  background-color: -moz-field;
+  -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
+  -moz-border-right-colors: ThreeDShadow ThreeDHighlight;
+  -moz-border-bottom-colors: ThreeDShadow ThreeDHighlight;
+  -moz-border-left-colors: ThreeDShadow ThreeDHighlight;
 }
 
 /* ::::: format toolbar ::::: */
@@ -429,6 +471,9 @@ treechildren::-moz-tree-image(remote-err) {
 #FormatToolbar {
   -moz-appearance: none;
   color: WindowText;
+  margin-left: 3px;
+  margin-right: 3px;
+  background-image: url("chrome://messenger/skin/messengercompose/linux-noise.png");
 }
 
 toolbarbutton.formatting-button {

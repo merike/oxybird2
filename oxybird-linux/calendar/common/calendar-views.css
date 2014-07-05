@@ -35,7 +35,15 @@ calendar-category-box:not([categories]) {
 }
 
 .calendar-item-image[itemType="todo"][progress="completed"] {
-    -moz-image-region: rect(0px 22px 11px 11px);
+    -moz-image-region: rect(0px 47px 11px 36px);
+}
+
+.calendar-item-image[itemType="todo"][progress="completed"][todoType="start"] {
+    -moz-image-region: rect(0px 54px 11px 36px);
+}
+
+.calendar-item-image[itemType="todo"][progress="completed"][todoType="end"] {
+    -moz-image-region: rect(0px 72px 11px 54px);
 }
 
 /* Multiday view */
@@ -905,22 +913,22 @@ calendar-event-gripbar[parentorient="horizontal"][whichside="end"] {
 }
 
 calendar-event-box[orient="vertical"] .calendar-event-box-grippy-top {
-    list-style-image: url("chrome://calendar/skin/event-grippy-top.png");
+    list-style-image: url("chrome://calendar/skin/common/event-grippy-top.png");
     visibility: hidden;
 }
 
 calendar-event-box[orient="vertical"] .calendar-event-box-grippy-bottom {
-    list-style-image: url("chrome://calendar/skin/event-grippy-bottom.png");
+    list-style-image: url("chrome://calendar/skin/common/event-grippy-bottom.png");
     visibility: hidden;
 }
 
 calendar-event-box[orient="horizontal"] .calendar-event-box-grippy-top {
-    list-style-image: url("chrome://calendar/skin/event-grippy-left.png");
+    list-style-image: url("chrome://calendar/skin/common/event-grippy-left.png");
     visibility: hidden;
 }
 
 calendar-event-box[orient="horizontal"] .calendar-event-box-grippy-bottom {
-    list-style-image: url("chrome://calendar/skin/event-grippy-right.png");
+    list-style-image: url("chrome://calendar/skin/common/event-grippy-right.png");
     visibility: hidden;
 }
 
@@ -1101,7 +1109,7 @@ tab[calview] > .tab-middle {
 }
 
 .item-classification-box {
-    list-style-image: url("chrome://calendar/skin/classification.png");
+    list-style-image: url("chrome://calendar/skin/common/classification.png");
     width: 11px;
     height: 11px;
     display: none;
