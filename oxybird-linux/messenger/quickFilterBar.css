@@ -71,7 +71,6 @@ toolbar[iconsize="large"] #qfb-show-filter-bar[disabled="true"] {
   border-width: 0;
 }
 
-
 #qfb-closebutton {
   list-style-image: url("chrome://global/skin/icons/closeSidebar.png");
   -moz-image-region: rect(0px, 14px, 14px, 0px);

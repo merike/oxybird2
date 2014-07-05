@@ -214,6 +214,9 @@
 #category-extension > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-extensions.png");
 }
+#category-service > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-service.png");
+}
 #category-theme > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-themes.png");
 }
@@ -222,6 +225,9 @@
 }
 #category-dictionary > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-dictionaries.png");
+}
+#category-experiment > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-experiments.png");
 }
 #category-availableUpdates > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-available.png");
@@ -287,6 +293,12 @@
 
 #header-search {
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  #header-search {
+    width: 12em;
+  }
 }
 
 .view-header {
@@ -408,6 +420,10 @@
   list-style-image: url("chrome://mozapps/skin/extensions/dictionaryGeneric.png");
 }
 
+.addon-view[type="experiment"] .icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/experimentGeneric.png");
+}
+
 .name-container {
   font-size: 150%;
   margin-bottom: 0;
@@ -490,21 +506,21 @@
 }
 
 .addon[active="false"] {
-  background-image: -moz-linear-gradient(rgba(135, 135, 135, 0.2),
-                                         rgba(135, 135, 135, 0.1));
+  background-image: linear-gradient(rgba(135, 135, 135, 0.2),
+                                    rgba(135, 135, 135, 0.1));
 }
 
 .addon-view[notification="warning"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png"),
-                    -moz-linear-gradient(rgba(255, 255, 0, 0.04),
-                                         rgba(255, 255, 0, 0));
+                    linear-gradient(rgba(255, 255, 0, 0.04),
+                                    rgba(255, 255, 0, 0));
   background-repeat: repeat-x;
 }
 
 .addon-view[notification="error"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-error.png"),
-                    -moz-linear-gradient(rgba(255, 0, 0, 0.04),
-                                         rgba(255, 0, 0, 0));
+                    linear-gradient(rgba(255, 0, 0, 0.04),
+                                    rgba(255, 0, 0, 0));
   background-repeat: repeat-x;
 }
 
@@ -512,16 +528,16 @@
 .addon-view[pending="upgrade"],
 .addon-view[pending="install"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-info-positive.png"),
-                    -moz-linear-gradient(rgba(0, 255, 0, 0.04),
-                                         rgba(0, 255, 0, 0));
+                    linear-gradient(rgba(0, 255, 0, 0.04),
+                                    rgba(0, 255, 0, 0));
   background-repeat: repeat-x;
 }
 
 .addon-view[pending="disable"],
 .addon-view[pending="uninstall"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-info-negative.png"),
-                    -moz-linear-gradient(rgba(128, 128, 128, 0.04),
-                                         rgba(128, 128, 128, 0));
+                    linear-gradient(rgba(128, 128, 128, 0.04),
+                                    rgba(128, 128, 128, 0));
   background-repeat: repeat-x;
 }
 
@@ -645,7 +661,7 @@
   background-repeat: no-repeat;
   border: 1px threedshadow solid;
   border-radius: 5px;
-  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #detail-screenshot[loading="error"] {
@@ -714,8 +730,8 @@ setting {
 }
 
 #detail-view[active="false"]:not([pending]):not([notification]) {
-  background-image: -moz-linear-gradient(rgba(135, 135, 135, 0.1),
-                                         rgba(135, 135, 135, 0));
+  background-image: linear-gradient(rgba(135, 135, 135, 0.1),
+                                    rgba(135, 135, 135, 0));
 }
 
 setting[first-row="true"] {
@@ -909,3 +925,29 @@ setting[type="radio"] > radiogroup {
   display: none;
 }
 
+/*** telemetry experiments ***/
+
+#detail-experiment-container {
+  font-size: 80%;
+  margin-bottom: 1em;
+}
+
+#detail-experiment-bullet-container,
+#detail-experiment-state,
+#detail-experiment-time,
+.experiment-bullet-container,
+.experiment-state,
+.experiment-time {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.addon .experiment-bullet,
+#detail-experiment-bullet {
+  fill: rgb(158, 158, 158);
+}
+
+.addon[active="true"] .experiment-bullet,
+#detail-view[active="true"] #detail-experiment-bullet {
+  fill: rgb(106, 201, 20);
+}
